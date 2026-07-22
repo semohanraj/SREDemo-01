@@ -49,4 +49,9 @@ terraform apply -var-file="example.tfvars"
   closest equivalent. Change it in `vms` if needed.
 - `admin_password` must be supplied at runtime via `TF_VAR_admin_password` (or a
   secret store). It is never stored in source control.
-- `*.tfvars` and state files are git-ignored to avoid leaking secrets.
+- `*.tfvars` files are git-ignored to avoid leaking secrets.
+- **State:** Terraform state is stored locally and committed to this GitHub
+  repository (no remote backend). The CI `apply` job commits the updated
+  `terraform.tfstate` back to `main`.
+  **Warning:** state files can contain sensitive values (including the VM admin
+  password) in plaintext. Keep this repository **private**.

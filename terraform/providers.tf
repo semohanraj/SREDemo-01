@@ -7,6 +7,9 @@ terraform {
       version = "~> 4.0"
     }
   }
+
+  # State is stored locally and committed to the Git repository (GitHub).
+  # No remote backend is configured.
 }
 
 provider "azurerm" {

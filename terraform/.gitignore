@@ -1,9 +1,8 @@
 # Local .terraform directories
 **/.terraform/*
 
-# .tfstate files
-*.tfstate
-*.tfstate.*
+# NOTE: Terraform state is intentionally committed to this repo (GitHub-only state).
+# WARNING: state may contain sensitive values in plaintext.
 
 # Crash log files
 crash.log
