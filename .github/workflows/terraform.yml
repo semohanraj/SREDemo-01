@@ -1,5 +1,6 @@
 name: Terraform
 
+# Re-run trigger: 2026-07-22
 on:
   push:
     branches: [main]
