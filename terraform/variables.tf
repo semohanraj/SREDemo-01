@@ -46,8 +46,8 @@ variable "vms" {
   }))
   description = "Map of VM name => size. All VMs are placed in the app subnet."
   default = {
-    "vm-f8s-01" = { size = "Standard_F8s_v2" }
-    "vm-f8s-02" = { size = "Standard_F8s_v2" }
+    "vm-f8s-01" = { size = "Standard_D8ls_v6" }
+    "vm-f8s-02" = { size = "Standard_D8ls_v6" }
     "vm-e4s-01" = { size = "Standard_E4s_v5" }
     "vm-e4s-02" = { size = "Standard_E4s_v5" }
     "vm-b4s-01" = { size = "Standard_B4s_v2" }
