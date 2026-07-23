@@ -14,8 +14,8 @@ subnets = {
 vms = {
   "vm-f8s-01"     = { size = "Standard_F8s_v2", subnet = "app" }
   "vm-f8s-02"     = { size = "Standard_F8s_v2", subnet = "app" }
-  "vm-e4s-01"     = { size = "Standard_E4s_v5", subnet = "app" }
-  "vm-e4s-02"     = { size = "Standard_E4s_v5", subnet = "app" }
+  "vm-e4s-01"     = { size = "Standard_E4s_v2", subnet = "app" }
+  "vm-e4s-02"     = { size = "Standard_E4s_v2", subnet = "app" }
   "vm-b4s-01"     = { size = "Standard_B4s_v2", subnet = "app" }
   "vm-f4s-web-01" = { size = "Standard_F4s_v2", subnet = "web" }
 }
