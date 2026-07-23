@@ -5,10 +5,9 @@ Modular Terraform configuration that provisions:
 - A resource group
 - A virtual network `172.21.0.0/22` (valid CIDR for the requested `172.21.1.0/22`)
 - Three equal-sized `/24` subnets: `web`, `app`, `db`
-- Five Windows Server 2022 VMs, all placed in the **app** subnet:
-  - 2 × `Standard_F8s_v2`
-  - 2 × `Standard_E4s_v2`
-  - 1 × `Standard_B4s_v2`
+- Six Windows Server 2022 VMs, each placed in its target subnet:
+  - **app** subnet: 2 × `Standard_F8s_v2`, 2 × `Standard_E4s_v2`, 1 × `Standard_B4s_v2`
+  - **web** subnet: 1 × `Standard_F4s_v2`
 
 ## Structure
 

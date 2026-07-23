@@ -20,7 +20,7 @@ module "compute" {
 
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
-  subnet_id           = module.network.subnet_ids[var.vm_subnet_name]
+  subnet_ids          = module.network.subnet_ids
   vms                 = var.vms
   admin_username      = var.admin_username
   admin_password      = var.admin_password

@@ -34,23 +34,20 @@ variable "subnets" {
   }
 }
 
-variable "vm_subnet_name" {
-  type        = string
-  description = "Name of the subnet where all VMs are placed."
-  default     = "app"
-}
 
 variable "vms" {
   type = map(object({
-    size = string
+    size   = string
+    subnet = string
   }))
-  description = "Map of VM name => size. All VMs are placed in the app subnet."
+  description = "Map of VM name => size and target subnet name."
   default = {
-    "vm-f8s-01" = { size = "Standard_F8s_v2" }
-    "vm-f8s-02" = { size = "Standard_F8s_v2" }
-    "vm-e4s-01" = { size = "Standard_E4s_v5" }
-    "vm-e4s-02" = { size = "Standard_E4s_v5" }
-    "vm-b4s-01" = { size = "Standard_B4s_v2" }
+    "vm-f8s-01"     = { size = "Standard_F8s_v2", subnet = "app" }
+    "vm-f8s-02"     = { size = "Standard_F8s_v2", subnet = "app" }
+    "vm-e4s-01"     = { size = "Standard_E4s_v5", subnet = "app" }
+    "vm-e4s-02"     = { size = "Standard_E4s_v5", subnet = "app" }
+    "vm-b4s-01"     = { size = "Standard_B4s_v2", subnet = "app" }
+    "vm-f4s-web-01" = { size = "Standard_F4s_v2", subnet = "web" }
   }
 }
 

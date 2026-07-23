@@ -8,16 +8,17 @@ variable "location" {
   description = "Azure region for the VMs."
 }
 
-variable "subnet_id" {
-  type        = string
-  description = "ID of the subnet where all VMs' NICs are placed."
+variable "subnet_ids" {
+  type        = map(string)
+  description = "Map of subnet name => subnet ID. Each VM references one of these by name."
 }
 
 variable "vms" {
   type = map(object({
-    size = string
+    size   = string
+    subnet = string
   }))
-  description = "Map of VM name => configuration (size)."
+  description = "Map of VM name => configuration (size and target subnet name)."
 }
 
 variable "admin_username" {
