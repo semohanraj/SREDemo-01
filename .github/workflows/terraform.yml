@@ -1,6 +1,6 @@
 name: Terraform
 
-# Re-run trigger: 2026-07-22
+# Re-run trigger: 2026-07-23 (OIDC configured)
 on:
   push:
     branches: [main]
