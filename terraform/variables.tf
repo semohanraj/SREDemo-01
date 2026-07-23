@@ -7,7 +7,7 @@ variable "resource_group_name" {
 variable "location" {
   type        = string
   description = "Azure region for all resources."
-  default     = "eastus"
+  default     = "swedencentral"
 }
 
 variable "vnet_name" {
@@ -48,8 +48,8 @@ variable "vms" {
   default = {
     "vm-f8s-01" = { size = "Standard_F8s_v2" }
     "vm-f8s-02" = { size = "Standard_F8s_v2" }
-    "vm-e4s-01" = { size = "Standard_E4s_v2" }
-    "vm-e4s-02" = { size = "Standard_E4s_v2" }
+    "vm-e4s-01" = { size = "Standard_E4s_v5" }
+    "vm-e4s-02" = { size = "Standard_E4s_v5" }
     "vm-b4s-01" = { size = "Standard_B4s_v2" }
   }
 }
