@@ -25,7 +25,7 @@ permissions:
   pull-requests: write
 
 env:
-  TF_VERSION: "1.13.3"
+  TF_VERSION: "1.5.8"
   WORKING_DIR: terraform
   ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
   ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
