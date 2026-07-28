@@ -4,6 +4,9 @@
 # NOTE: Terraform state is intentionally committed to this repo (GitHub-only state).
 # WARNING: state may contain sensitive values in plaintext.
 
+# Transient state lock file (never commit)
+.terraform.tfstate.lock.info
+
 # Crash log files
 crash.log
 crash.*.log
