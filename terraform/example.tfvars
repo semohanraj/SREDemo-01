@@ -18,6 +18,7 @@ vms = {
   "vm-e4s-02"     = { size = "Standard_E4s_v2", subnet = "app" }
   "vm-b4s-01"     = { size = "Standard_B4s_v2", subnet = "app" }
   "vm-f4s-web-01" = { size = "Standard_F4s_v2", subnet = "web" }
+  "vm-f4s-web-02" = { size = "Standard_D4s_v2", subnet = "web" }
 }
 
 admin_username = "azureadmin"
