@@ -25,7 +25,7 @@ permissions:
   pull-requests: write
 
 env:
-  TF_VERSION: "1.5.9"
+  TF_VERSION: "1.5.8"
   WORKING_DIR: terraform
   ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
   ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4.0.1
         with:
           terraform_version: ${{ env.TF_VERSION }}
 
@@ -71,7 +71,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4.0.1
         with:
           terraform_version: ${{ env.TF_VERSION }}
 
@@ -109,7 +109,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4.0.1
         with:
           terraform_version: ${{ env.TF_VERSION }}
 
